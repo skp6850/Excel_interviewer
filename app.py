@@ -1,17 +1,12 @@
-# app.py
-"""
-The main Streamlit application for the Excel Mock Interviewer.
-CORRECTED to fix the set_page_config error.
-"""
+#The main Streamlit application for the Excel Mock Interviewer.
+
 import streamlit as st
 from interviewer import ExcelInterviewer
 import config
 
-# --- Page Configuration ---
-# CORRECT: This MUST be the very first Streamlit command in your script.
-st.set_page_config(page_title="Excel Mock Interviewer", page_icon="📄")
 
-# This command and all others must come AFTER set_page_config.
+st.set_page_config(page_title="Excel Mock Interviewer", page_icon="🐦‍🔥")
+
 st.title("🤖 Excel Mock Interviewer")
 
 # --- Session State Initialization ---
@@ -41,9 +36,8 @@ def handle_answer(user_answer):
         feedback = f"**Feedback:** {evaluation['feedback']}"
         st.session_state.messages.append({"role": "assistant", "content": feedback})
         st.session_state.question_count += 1
-        st.session_state.stage = "asking" # Go back to ask the next question
+        st.session_state.stage = "asking" 
     
-    # Check if we just answered the practical task
     else:
         with st.spinner("Verifying your answer..."):
             is_correct = st.session_state.interviewer.evaluate_practical_answer(user_answer)
@@ -51,7 +45,7 @@ def handle_answer(user_answer):
         st.session_state.messages.append({"role": "assistant", "content": result_text})
         st.session_state.stage = "summary" # Move to summary stage
 
-# --- Main App Logic & Flow ---
+
 
 # Stage 1: Start Button
 if st.session_state.stage == "start":
@@ -60,7 +54,7 @@ if st.session_state.stage == "start":
         st.session_state.stage = "asking"
         st.rerun()
 
-# Stage 2: Asking Questions (generates question, displays it, then waits)
+# Stage 2: Asking Questions)
 if st.session_state.stage == "asking":
     display_chat() # Display existing chat
     with st.spinner("Generating question..."):
@@ -77,13 +71,13 @@ if st.session_state.stage == "asking":
                 "role": "assistant", 
                 "content": f"{task['question']}\n\n**Here is the link:** {task['sheet_url']}"
             })
-    # After generating and adding the new question, change stage and rerun
+   
     st.session_state.stage = "waiting_for_answer"
     st.rerun()
 
 # Stage 3: Waiting for user's answer
 if st.session_state.stage == "waiting_for_answer":
-    display_chat() # Display the chat, which now includes the new question
+    display_chat()
     user_answer = st.chat_input("Your Answer")
     if user_answer:
         handle_answer(user_answer)
