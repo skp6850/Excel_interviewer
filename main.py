@@ -1,14 +1,8 @@
-# main.py
-"""
-The main entry point for the Excel Mock Interviewer application.
-UPDATED to save a transcript of each interview to a .txt file.
-"""
 from interviewer import ExcelInterviewer
 import config
-import datetime # Import the datetime library
-
+import datetime 
 def main():
-    """Runs the full interview process from start to finish."""
+    
     print("--- Welcome to your Automated Excel Mock Interview ---")
     print("I will ask you a few questions to assess your skills.")
     
@@ -47,7 +41,7 @@ def main():
     print("\n--- Final Evaluation ---")
     print(summary)
     
-    # --- NEW: Part 4: Save Transcript ---
+    # Part 4: Save Transcript ---
     print("\n--- Saving Transcript ---")
     try:
         # Create a unique filename with a timestamp

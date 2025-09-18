@@ -1,14 +1,11 @@
-# llm_service.py
-
 import streamlit as st
 import os
 import json
 import google.generativeai as genai
 from dotenv import load_dotenv
+import time
 
-# --- Configure the Gemini API using Streamlit Secrets ---
-# This code will try to use Streamlit's secrets first.
-# If it fails (e.g., running locally), it falls back to your .env file.
+
 try:
     # Use Streamlit's secrets when deployed
     api_key = st.secrets["GEMINI_API_KEY"]
@@ -52,6 +49,7 @@ def call_llm(prompt_template, variables={}):
         elif cleaned_text.startswith("`"):
              cleaned_text = cleaned_text.strip("`")
              
+        time.sleep(1)
         return cleaned_text
 
     except Exception as e:

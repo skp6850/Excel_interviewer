@@ -1,8 +1,3 @@
-# interviewer.py
-"""
-Contains the core ExcelInterviewer class that manages interview state and logic.
-UPDATED with a retry loop to ensure unique questions.
-"""
 import json
 from llm_service import call_llm
 from g_sheets_service import check_practical_task
@@ -15,10 +10,7 @@ class ExcelInterviewer:
         self.history = []
 
     def get_conversational_question(self):
-        """
-        Gets a unique conversational question from the LLM.
-        It will retry up to 3 times if a duplicate question is generated.
-        """
+    
         max_retries = 3
         for attempt in range(max_retries):
             # Generate a question using the list of already asked questions as context

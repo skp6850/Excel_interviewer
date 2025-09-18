@@ -1,7 +1,4 @@
-# g_sheets_service.py
-"""
-Handles interaction with Google Sheets API for practical tasks.
-"""
+
 import time
 
 def check_practical_task(sheet_url, user_answer, expected_answer):

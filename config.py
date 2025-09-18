@@ -1,8 +1,4 @@
-# config.py
-"""
-Configuration settings for the interview.
-UPDATED with the user's specific Google Sheet link.
-"""
+
 
 INTERVIEW_LENGTH_CONVERSATIONAL = 3
 PRACTICAL_TASK = {
