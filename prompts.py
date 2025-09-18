@@ -1,9 +1,3 @@
-# prompts.py
-"""
-IMPROVED prompts for a live LLM connection.
-UPDATED to fix the string formatting KeyError.
-"""
-
 PROMPT_GENERATE_QUESTION = """
 You are an expert Excel technical interviewer.
 Your task is to generate ONE simple, foundational Excel interview question suitable for a beginner.
@@ -63,4 +57,5 @@ Highlight one clear strength, one specific area for improvement, and a recommend
 
 **Interview History:**
 {history}
+
 """
