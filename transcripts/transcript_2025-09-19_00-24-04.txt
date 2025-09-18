@@ -1,0 +1,21 @@
+--- Excel Mock Interview Transcript ---
+Date and Time: 2025-09-19_00-24-04
+
+Interviewer: What is the purpose of the AutoSum feature in Excel, and how would you use it?
+Candidate: The AutoSum feature in Excel automatically calculates and inserts a SUM formula for a selected range of numbers, quickly totaling columns or rows. 
+[Feedback]: While your answer is accurate, mentioning the automatic detection of the summation range and the use of the AutoSum button would enhance its completeness.
+
+Interviewer: What is the purpose of the AVERAGE function in Excel?
+Candidate:  The primary purpose of the AVERAGE function in Excel is to calculate the arithmetic mean of a set of numbers, which is found by summing all the values in a range or list and then dividing by the count of those values.
+[Feedback]: The answer is accurate, but mentioning how AVERAGE handles errors (e.g., ignoring text values) would enhance completeness.
+
+Interviewer: What is the purpose of the `COUNTIF` function in Excel?
+Candidate: I do not recall
+[Feedback]: Knowing the purpose of COUNTIF is fundamental; reviewing Excel's basic functions is recommended.
+
+Interviewer: Now for a practical task. In the Google Sheet I've shared, use a formula in cell F2 to find the price of the 'Keyboard'. What is the final value in that cell?
+Candidate: 75
+[Result]: Correct
+
+--- Final Evaluation ---
+The candidate demonstrated a good understanding of basic Excel functions like AutoSum and AVERAGE, showcasing a solid foundational knowledge.  However, a significant weakness was revealed by their inability to recall the purpose of the COUNTIF function, highlighting a gap in their knowledge of core formulas.  To improve, the candidate should review fundamental Excel functions and practice applying them in diverse scenarios;  I recommend offering conditional employment pending successful completion of a short Excel skills assessment.
